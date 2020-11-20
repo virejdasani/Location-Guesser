@@ -1,20 +1,6 @@
-
-
-// Get the users IP Address
-function getIP() {
-
-    fetch('https://api.ipify.org/?format=json')
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            let ipAddr = data.ip;
-            document.getElementById("IP").innerHTML = ipAddr; 
-        })
-}
-
+// Get Location from IP
 function getLocation(ipAddr) {
-    fetch('http://ip-api.com/json/', ipAddr)
+    fetch('http://ip-api.com/json/')
         .then(function (response) {
             return response.json();
         })
@@ -22,9 +8,13 @@ function getLocation(ipAddr) {
             let status = data.status;
             let country = data.country;
             let city = data.city;
+            let ip = data.query;
 
             if (status == "success") {
-                document.getElementById("Location").innerHTML = country + ", " + city
+                document.getElementById("Location").innerHTML = country + ", " + city;
+            }
+            else {
+                document.getElementById("Location").innerHTML = "ERROR"
             }
         })
 }   
