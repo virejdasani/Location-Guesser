@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Skeptical</title>
+</head>
+<body>
+    <script>
+        navigator.geolocation.getCurrentPosition(function(position) {
+        document.write("I asked you to press deny!")
+        });
+    </script>
+    <div style="text-align: center;">
+        <h1 style="padding-top: 200px; color: red;">
+            CLICK DENY
+        </h1>
+        <h2 style="padding-top: 30px;">We don't need to know your location.</h2>
+        <h2 style="padding-top: 30px; padding-bottom: 10px;">We can guess it based on your answers to these questions.</h2>
+        <a href="q1.html" class="btn btn-primary">Go To Questions</a>
+    </div>
+</body>
+</html>
